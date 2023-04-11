@@ -1,0 +1,59 @@
+---
+title: "Case Study: Bellabeats Data Analysis"
+author: "Alfredo Ormeno"
+date: "2023-04-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+***
+
+_The case study follows the six step data analysis process:_
+
+
+### Ask
+### Prepare 
+### Process
+### Analyze
+### Share
+### Act
+
+
+## Scenario
+***
+Bellabeats is a tech-driven wellness company for women. Since the company's establishment in 2013, Bellbeats has grown rapidly and has the potential to become a larger player in the global smart device market. The company has 5 focus products: bellabeat app, leaf, time, spring and bellabeat membership. Our team has been asked to analyze smart device data to gain insight into how consumers are using their smart devices. The insights we discover will then help guide the  marketing strategy for the company. 
+
+
+## 1. ASK
+***
+**Bussiness Task:**
+
+Analyze consumers use of an existing competitor smart device to identify potential opportunities for growth and recommendations for the Bellabeat marketing strategy
+
+*Primary stakeholders:* Urška Sršen and Sando Mur, executive team members.
+
+*Secondary stakeholders:* Bellabeat marketing analytics team.
+
+**Questions for the analysis:**
+
+1. What are some trends in smart device usage?
+
+2. How could these trends apply to Bellabeat customers?
+
+3. How could these trends help influence Bellabeat’s marketing strategy?
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
