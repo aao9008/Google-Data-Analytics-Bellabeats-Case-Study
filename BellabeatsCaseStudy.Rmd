@@ -216,4 +216,6 @@ glimpse(weightLogInfo_merged)
 ```
 
 **Removing data frames:**
-All eight of the data frames contain the “Id” column, so it is possible to merge all of them if needed. The daily_activity data frame appears to contain data for calories, intensities, and steps. In order to use the daily_activity frame in place of daily_calories, daily_intensities, and daily_steps, the number of observations must be the same and the observations must match for each ID number.
+All eight of the data frames contain the “Id” column, so all dataframes can be merged. It is important to note that the daily_activity data frame appears to contain data for calories, intensities, and steps, thus all other daily data frames possibly contain duplicate data and can be removed. In order to use the daily_activity frame in place of daily_calories, daily_intensities, and daily_steps, the number of observations must be the same and the observations must match for each ID number.
+
+The sqldf package is loaded to utilize SQL syntax to determine if the values in the dailyCalories, dailyIntensitites, and dailySteps are present within the dailyActivity data frame. The number of columns must be the same between the data frames so a temporary dat frame witht the important columns is created first. 

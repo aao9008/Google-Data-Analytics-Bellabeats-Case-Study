@@ -102,3 +102,24 @@ head(weightLogInfo_merged)
 colnames(weightLogInfo_merged)
 
 glimpse(weightLogInfo_merged)
+
+# Use SQL to determine if dailyActivites contains data from other daily data frame sets. 
+install.packages("sqldf")
+
+library(sqldf)
+
+# Create new temporary data frame with dailyCalories info from dailyActivity data frame
+dailyActivity2 <- dailyActivity_merged %>%
+  select(Id, ActivityDate, Calories)
+
+# Check that data frame structure is correct
+head(dailyActivity2)
+
+# Compare to dailiyCalories data frame using SQL intersect query
+sql_check <- sqldf('SELECT * FROM dailyActivity2 INTERSECT SELECT * FROM dailyCalories_merged')
+
+# Check structure of data frame that results for sql_check
+head(sql_check)
+
+# If number of observations in sql_check == number of observation in dailyCaloires, then dailyActivites data frame contains all of dailyCalories data
+nrow(sql_check)
